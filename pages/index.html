@@ -44,8 +44,7 @@
       </ul>
 
       <form class="d-flex" role="search">
-        <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success " type="submit">Search</button>
+        <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       </form>
     </div>
   </nav>
@@ -56,54 +55,20 @@
     <thead>
       <tr>
         <th scope="col">Roll No</th>
+        <th scope="col">Registration No</th>
         <th scope="col">Full Name</th>
         <th scope="col">Email</th>
         <th scope="col">Address</th>
         <th scope="col">Phone</th>
-        <th scope="col">Registration No</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Joined Date</th>
       </tr>
     </thead>
-    <tbody class="table-group-divider" id="student-table-data"></tbody>
+    <tbody class="table-group-divider" id="student-table-body"></tbody>
   </table>
 </body>
 
-<script>
-  const studentTable = document.getElementById("student-table-data");
-
-  const students = [
-    {
-      rollNo: 202031,
-      fullName: "Abhinish Goinjihar",
-      email: "Goinjihar@gmail.com",
-      phone: "9800000000",
-    },
-    {
-      rollNo: 202031,
-      fullName: "Avhi Shrestha",
-      email: "shresthacr11@gmail.com",
-      phone: "9800000000",
-    },
-  ];
-
-  for (const student of students) {
-    const row = document.createElement("tr");
-
-    const rollNoData = document.createElement("td");
-    rollNoData.innerText = student.rollNo;
-    row.appendChild(rollNoData);
-
-    const fullNameData = document.createElement("td")
-    fullNameData.innerText = student.fullName
-    row.appendChild(fullNameData)
-
-    const emailData = document.createElement("td")
-    emailData.innerText = student.email
-    row.appendChild(emailData)
-
-
-
-    studentTable.appendChild(row)
-  }
-</script>
+<script defer src="../js/index.js"></script>
 
 </html>
